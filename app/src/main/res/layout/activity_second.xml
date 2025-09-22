@@ -7,24 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".SecondActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="300dp" />
-
     <Button
         android:id="@+id/button2"
-        android:layout_width="411dp"
-        android:layout_height="51dp"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="344dp"
         android:text="Button"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

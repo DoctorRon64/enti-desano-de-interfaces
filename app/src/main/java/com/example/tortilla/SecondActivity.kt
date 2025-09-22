@@ -2,13 +2,16 @@ package com.example.tortilla
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import org.w3c.dom.Text
 
 class SecondActivity : AppCompatActivity() {
     private lateinit var Button: Button;
+    //private lateinit var TextView: TextView;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,11 +24,13 @@ class SecondActivity : AppCompatActivity() {
         }
 
         Button = findViewById(R.id.button2);
-        Button.setOnClickListener{
-            //codigo
+        //textView.
+        Button.setOnClickListener{ onButtonClick() }
+    }
 
-            setContentView(R.layout.activity_main);
-            finishAffinity()
-        }
+    private fun onButtonClick() {
+        Button.text = "Vale me odio este"
+        //setContentView(R.layout.activity_main);
+        //finishAffinity()
     }
 }
