@@ -1,5 +1,6 @@
 package com.example.tortilla
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -10,27 +11,25 @@ import androidx.core.view.WindowInsetsCompat
 import org.w3c.dom.Text
 
 class SecondActivity : AppCompatActivity() {
-    private lateinit var Button: Button;
-    //private lateinit var TextView: TextView;
+    private lateinit var CanbioEscena: Button;
+    private lateinit var Texter: TextView;
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+   override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_second)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
 
-        Button = findViewById(R.id.button2);
-        //textView.
-        Button.setOnClickListener{ onButtonClick() }
+       CanbioEscena = findViewById(R.id.button);
+       CanbioEscena.setOnClickListener {
+           onButtonClick();
+       }
+
+       Texter = findViewById(R.id.textView5);
+       val intent = Intent(this, MainActivity::class.java);
+       val message = intent.getStringExtra("greetings");
+       Texter.setText(message);
     }
 
     private fun onButtonClick() {
-        Button.text = "Vale me odio este"
-        //setContentView(R.layout.activity_main);
-        //finishAffinity()
+        startActivity(intent);
     }
 }
